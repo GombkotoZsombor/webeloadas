@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API CRUD</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <!-- Kötelező H1-es címsor -->
+    <h1>Web programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="javascript.html">JavaScript CRUD</a></li>
+      <li><a href="react.html">React CRUD</a></li>
+      <li><a href="spa.html">SPA</a></li>
+      <li><a href="fetchapi.html" class="active">Fetch API</a></li>
+      <li><a href="axios.html">Axios</a></li>
+      <li><a href="oojs.html">OOJS</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <h2>Fetch API CRUD - Táncosok (Szerveroldali Adatbázissal)</h2>
+
+    <!-- Űrlap: Létrehozás és Frissítés -->
+    <form id="crudForm" style="margin-bottom: 20px;">
+      <input type="number" id="tagId" placeholder="ID (pl. 1000)" required>
+      <input type="text" id="tagNev" placeholder="Név" required>
+      <select id="tagNem">
+        <option value="1">Férfi</option>
+        <option value="0">Nő</option>
+      </select>
+      <input type="date" id="tagSzulido" required>
+      <button type="submit" id="saveBtn">Hozzáadás / Módosítás</button>
+      <button type="button" id="cancelBtn" style="display:none;">Mégse</button>
+    </form>
+
+    <!-- Táblázat: Olvasás, Törlés, Szerkesztés -->
+    <table border="1" style="width:100%; text-align: left;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Név</th>
+          <th>Nem</th>
+          <th>Születési idő</th>
+          <th>Műveletek</th>
+        </tr>
+      </thead>
+      <tbody id="dataTable">
+        <!-- Ide tölti be a JS az adatokat -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+  
+  </footer>
+
+  <script src="js/fetchapi.js"></script>
+</body>
+</html>
